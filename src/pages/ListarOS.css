@@ -1,0 +1,357 @@
+.listar-os {
+  padding: 2rem;
+  max-width: 1600px;
+}
+
+.page-header-os {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.btn-criar-os {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.btn-criar-os:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+/* Filtros */
+.filtros-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.busca-container {
+  flex: 1;
+  position: relative;
+}
+
+.busca-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.input-busca-os {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+.input-busca-os:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+}
+
+.filtro-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  min-width: 250px;
+}
+
+.select-filtro {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Stats Cards */
+.stats-os-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.stat-os-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+
+.stat-os-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.stat-os-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-os-label {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-os-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-os-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.stat-total {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.stat-andamento {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+}
+
+.stat-concluido {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.stat-aguardando {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+/* Tabela */
+.table-os-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.table-os-wrapper {
+  overflow-x: auto;
+}
+
+.table-os {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-os thead {
+  background: var(--bg-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.table-os th {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.table-os tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s;
+}
+
+.table-os tbody tr:hover {
+  background: var(--hover-bg);
+}
+
+.table-os td {
+  padding: 1rem;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.os-numero {
+  font-weight: 700;
+  color: #f97316;
+  font-family: 'Courier New', monospace;
+}
+
+.os-placa {
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.os-valor {
+  font-weight: 700;
+  color: #10b981;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-em-andamento {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.status-concluído {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.status-aguardando-peças {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.status-cancelado {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* Ações */
+.acoes-os {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-acao {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: var(--hover-bg);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn-acao:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.btn-delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .listar-os {
+    padding: 1rem;
+  }
+
+  .page-header-os {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .btn-criar-os {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filtros-container {
+    flex-direction: column;
+  }
+
+  .filtro-status {
+    min-width: auto;
+  }
+
+  .stats-os-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .table-os th,
+  .table-os td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .acoes-os {
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-os-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-os-value {
+    font-size: 1.5rem;
+  }
+}
